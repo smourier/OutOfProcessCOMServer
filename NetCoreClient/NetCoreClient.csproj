@@ -11,7 +11,7 @@
     <COMReference Include="OutOfProcessCOMServerLib">
       <VersionMinor>0</VersionMinor>
       <VersionMajor>1</VersionMajor>
-      <Guid>06ee9bc1-85fc-409a-a0bc-ae9f8a1037eb</Guid>
+      <Guid>ca11ab1e-85fc-409a-a0bc-ae9f8a1037eb</Guid>
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
       <Isolated>false</Isolated>

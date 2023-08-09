@@ -7,17 +7,17 @@
 
 using namespace ATL;
 
-class COutOfProcessCOMServerModule : public ATL::CAtlExeModuleT< COutOfProcessCOMServerModule >
+class COutOfProcessCOMServerModule : public CAtlExeModuleT<COutOfProcessCOMServerModule>
 {
-public :
+public:
 	DECLARE_LIBID(LIBID_OutOfProcessCOMServerLib)
-	DECLARE_REGISTRY_APPID_RESOURCEID(IDR_OUTOFPROCESSCOMSERVER, "{06ee9bc1-85fc-409a-a0bc-ae9f8a1037eb}")
+	DECLARE_REGISTRY_APPID_RESOURCEID(IDR_OUTOFPROCESSCOMSERVER, "{ca11ab1e-85fc-409a-a0bc-ae9f8a1037eb}")
 };
 
 COutOfProcessCOMServerModule _AtlModule;
 
 extern "C" int WINAPI _tWinMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/,
-								LPTSTR /*lpCmdLine*/, int nShowCmd)
+	LPTSTR /*lpCmdLine*/, int nShowCmd)
 {
 	return _AtlModule.WinMain(nShowCmd);
 }

@@ -9,7 +9,7 @@ import "ocidl.idl";
 
 [
 	object,
-	uuid(f18d5855-7d92-4aed-ada7-87d1a9595377),
+	uuid(ca11ab1e-7d92-4aed-ada7-87d1a9595377),
 	dual,
 	nonextensible,
 	pointer_default(unique)
@@ -21,7 +21,7 @@ interface IMouse : IDispatch
 };
 
 [
-	uuid(5790d466-f696-470f-a9f0-707d483e5d13),
+	uuid(ca11ab1e-f696-470f-a9f0-707d483e5d13),
 	nonextensible,
 ]
 interface IKeyboard : IUnknown {
@@ -30,14 +30,14 @@ interface IKeyboard : IUnknown {
 };
 
 [
-	uuid(06ee9bc1-85fc-409a-a0bc-ae9f8a1037eb),
+	uuid(ca11ab1e-85fc-409a-a0bc-ae9f8a1037eb),
 	version(1.0),
 ]
 library OutOfProcessCOMServerLib
 {
 	importlib("stdole2.tlb");
 	[
-		uuid(3eb17078-42bb-425f-adaa-e050e6b3add4)
+		uuid(ca11ab1e-42bb-425f-adaa-e050e6b3add4)
 	]
 	coclass Mouse
 	{

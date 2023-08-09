@@ -16,22 +16,23 @@ class ATL_NO_VTABLE CMouse :
 	public IDispatchImpl<IMouse, &IID_IMouse, &LIBID_OutOfProcessCOMServerLib, /*wMajor =*/ 1, /*wMinor =*/ 0>,
 	public IKeyboard
 {
+
 public:
 	CMouse()
 	{
 	}
 
-DECLARE_REGISTRY_RESOURCEID(106)
+	DECLARE_REGISTRY_RESOURCEID(106)
 
-BEGIN_COM_MAP(CMouse)
-	COM_INTERFACE_ENTRY(IMouse)
-	COM_INTERFACE_ENTRY(IDispatch)
-	COM_INTERFACE_ENTRY(IKeyboard)
-END_COM_MAP()
+	BEGIN_COM_MAP(CMouse)
+		COM_INTERFACE_ENTRY(IMouse)
+		COM_INTERFACE_ENTRY(IDispatch)
+		COM_INTERFACE_ENTRY(IKeyboard)
+	END_COM_MAP()
 
 	DECLARE_PROTECT_FINAL_CONSTRUCT()
 
-	HRESULT FinalConstruct()
+		HRESULT FinalConstruct()
 	{
 		return S_OK;
 	}

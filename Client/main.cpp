@@ -6,29 +6,27 @@
 #include "..\OutOfProcessCOMServer\OutOfProcessCOMServer_i.h"
 #include "..\OutOfProcessCOMServer\OutOfProcessCOMServer_i.c"
 
+class CClientModule : public ATL::CAtlExeModuleT<CClientModule>
+{
+};
+
+CClientModule _pAtlModule;
+
 int main()
 {
-	CoInitialize(nullptr);
+	auto hr = CoInitialize(nullptr);
 	{
 		CComPtr<IMouse> mouse;
-		auto hr = mouse.CoCreateInstance(CLSID_Mouse);
-		std::cout << "CoCreateInstance 0x" << std::hex << hr << std::endl;
+		ATLASSERT(SUCCEEDED(mouse.CoCreateInstance(CLSID_Mouse)));
 
-		hr = mouse->click(CComBSTR(L"myButton"));
-		std::cout << "click 0x" << std::hex << hr << std::endl;
-
-		hr = mouse->scroll(1234);
-		std::cout << "scroll 0x" << std::hex << hr << std::endl;
+		ATLASSERT(SUCCEEDED(mouse->click(CComBSTR(L"myButton"))));
+		ATLASSERT(SUCCEEDED(mouse->scroll(1234)));
 
 		CComPtr<IKeyboard> keyboard;
-		hr = mouse.QueryInterface(&keyboard);
-		std::cout << "QueryInterface 0x" << std::hex << hr << std::endl;
+		ATLASSERT(SUCCEEDED(mouse.QueryInterface(&keyboard)));
 
-		hr = keyboard->pressKey(L"myKey");
-		std::cout << "pressKey 0x" << std::hex << hr << std::endl;
-
-		hr = keyboard->releaseKey(L"myKey");
-		std::cout << "releaseKey 0x" << std::hex << hr << std::endl;
+		ATLASSERT(SUCCEEDED(keyboard->pressKey(L"myKey")));
+		ATLASSERT(SUCCEEDED(keyboard->releaseKey(L"myKey")));
 	}
 	CoUninitialize();
 	return 0;

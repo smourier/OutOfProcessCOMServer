@@ -99,7 +99,7 @@ EXTERN_C const IID IID_IMouse;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("f18d5855-7d92-4aed-ada7-87d1a9595377")
+    MIDL_INTERFACE("ca11ab1e-7d92-4aed-ada7-87d1a9595377")
     IMouse : public IDispatch
     {
     public:
@@ -248,7 +248,7 @@ EXTERN_C const IID IID_IKeyboard;
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
     
-    MIDL_INTERFACE("5790d466-f696-470f-a9f0-707d483e5d13")
+    MIDL_INTERFACE("ca11ab1e-f696-470f-a9f0-707d483e5d13")
     IKeyboard : public IUnknown
     {
     public:
@@ -346,7 +346,7 @@ EXTERN_C const CLSID CLSID_Mouse;
 
 #ifdef __cplusplus
 
-class DECLSPEC_UUID("3eb17078-42bb-425f-adaa-e050e6b3add4")
+class DECLSPEC_UUID("ca11ab1e-42bb-425f-adaa-e050e6b3add4")
 Mouse;
 #endif
 #endif /* __OutOfProcessCOMServerLib_LIBRARY_DEFINED__ */
